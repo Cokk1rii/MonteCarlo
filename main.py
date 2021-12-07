@@ -66,6 +66,7 @@ def extract_inner_points():
             # the variables below should contain only the coordinates of inner points
             inner_points_x.append(x)
             inner_points_y.append(y)
+
             inner_points_z = [] # revise this code if necessary
             inner_points_color = [] # revise this code if necessary
 
