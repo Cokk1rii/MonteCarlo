@@ -16,9 +16,9 @@ def add_new_point():
     # Create 2D or 3D coordinates
     x = random.uniform(0, area_size)
     y = random.uniform(0, area_size)
-    z = 0 # revise this code if necessary
-    points_x.append(x), points_y.append(y), points_z # revise this code if necessary
-    return x, y # revise this code if necessary
+    z = random.uniform(0, area_size) # revise this code if necessary
+    points_x.append(x), points_y.append(y), points_z.append(z) # revise this code if necessary
+    return x, y, z # revise this code if necessary
 
 def is_in(x, y): # revise this code if necessary
     global num_inner_points
@@ -70,7 +70,8 @@ def extract_inner_points():
             inner_points_color = [] # revise this code if necessary
 
 if __name__ == "__main__":
-    generate_points(500)
-#    extract_inner_points()
-    draw_figure_2d() # or draw_figure_3d()
+    generate_points(100000)
+    extract_inner_points()
+    # draw_figure_2d()
+    draw_figure_3d(xs=inner_points_x, ys=inner_points_y, zs=inner_points_z, color= points_color)
     
