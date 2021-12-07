@@ -33,9 +33,9 @@ def generate_points(n):
         points_color.append(is_in(*add_new_point()))
 
 def draw_figure_2d(xs = points_x, ys = points_y, color = points_color):
-    pi = round(10, 4) # calculate the value of pi here
+    pi = round(num_inner_points*4/len(xs), 4) # calculate the value of pi here
 
-    fig = plt.figure(figsize=(5, 5))
+    fig = plt.figure(figsize=(10, 10))
     plt.scatter(xs, ys,
                 c=color, s=1, alpha=0.3,
                 label='pi = {}'.format(pi))
